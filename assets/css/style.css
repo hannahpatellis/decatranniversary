@@ -89,9 +89,21 @@ section#desc {
 }
 section#end {
 	background-color: #270D15;
+	flex-direction: column;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+section#end div:first-child {
+	margin-bottom: 100px;
+}
+section#end div:first-child img {
+	margin-right: 100px;
 }
 section.cover {
 	flex-direction: column;
+}
+section.extra {
+	background-color: #f9cbda;
 }
 
 @media only screen and (max-width: 800px) {
