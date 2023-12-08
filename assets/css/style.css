@@ -43,18 +43,59 @@ table {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  height: 100vh;
-  width: 100vw;
+  font-size: 14px;
+	font-family: "contralto-small", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 h1 {
-  color: white;
-  text-align: center;
-  font-weight: bold;
   font-size: 3rem;
+	font-weight: bold;
+	padding-bottom: 12px;
+}
+h2 {
+	font-size: 1.2rem;
+	font-style: italic;
+	padding-bottom: 24px;
+}
+p {
+	font-size: 0.9rem;
+	line-height: 1.9rem;
+	padding-bottom: 12px;
+}
+em {
+	font-style: italic;
+}
+
+section {
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section article {
+	text-align: left;
+	width: 40vw;
+	margin-right: 36px;
+}
+
+section#title {
+	background-color: #270D15;
+}
+section#desc {
+	background-color: #f9cbda;
+}
+section#end {
+	background-color: #270D15;
+}
+section.cover {
+	flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+	section {
+		flex-direction: column;
+	}
 }
