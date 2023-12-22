@@ -67,6 +67,15 @@ p {
 em {
 	font-style: italic;
 }
+ol {
+	list-style: decimal-leading-zero;
+	padding-left: 2rem;
+}
+li {
+	font-size: 0.9rem;
+	line-height: 1.9rem;
+	padding-bottom: 12px;
+}
 
 section {
 	min-height: 100vh;
@@ -75,17 +84,45 @@ section {
   align-items: center;
   justify-content: center;
 }
+section.entry {
+	align-items: flex-start;
+	padding-bottom: 100px;
+}
 section article {
 	text-align: left;
 	width: 40vw;
 	margin-right: 36px;
+}
+section aside.artpiece {
+	width: 40vw;
+}
+section aside.artpiece img {
+	width: 40vw;
 }
 
 section#title {
 	background-color: #270D15;
 }
 section#desc {
+	flex-direction: column;
 	background-color: #f9cbda;
+}
+section#desc div {
+	width: 40vw;
+}
+section#stickers {
+	flex-direction: column;
+	background-color: #f9cbda;
+}
+section#stickers img {
+	height: 20vw;
+	width: auto;
+}
+section#stickers img:first-child {
+	margin-right: 50px;
+}
+section#stickers h2 {
+	margin-top: 50px;
 }
 section#end {
 	background-color: #270D15;
@@ -93,21 +130,84 @@ section#end {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
-section#end div:first-child {
+section#end div {
 	margin-bottom: 100px;
-}
-section#end div:first-child img {
-	margin-right: 100px;
+	height: 450px;
+	width: 660px;
 }
 section.cover {
 	flex-direction: column;
 }
+section.cover img.single {
+	height: 10vw;
+	max-height: 141px;
+	width: auto;
+}
+section.cover img.double {
+	height: 20vw;
+	max-height: 256px;
+	width: auto;
+}
 section.extra {
 	background-color: #f9cbda;
+	flex-direction: column;
+}
+section.extra div {
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+section.extra div:last-child {
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.extra div:last-child img {
+	margin-right: 50px;
+}
+section.extra div:last-child img:last-child {
+	margin-right: 0px;
+}
+
+footer {
+	background-color: #f9cbda;
+	text-align: center;
+	flex-direction: column;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer img {
+	height: 60px;
+	width: auto;
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 800px) {
 	section {
 		flex-direction: column;
+	}
+	section#desc div {
+		width: 60vw;
+	}
+	section article {
+		width: 90vw;
+		margin-right: 0;
+		margin-left: 5vw;
+	}
+	section aside.artpiece {
+		margin-top: 36px;
+		width: 90vw;
+		margin-left: 5vw;
+	}
+	section aside.artpiece img {
+		width: 90vw;
+	}
+
+	section#end div {
+		width: auto;
 	}
 }
