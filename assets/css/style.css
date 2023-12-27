@@ -43,9 +43,8 @@ table {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-	font-family: "contralto-small", sans-serif;
+  font-size: 16px;
+	font-family: "contralto-small", New York, serif;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -60,7 +59,7 @@ h2 {
 	padding-bottom: 24px;
 }
 p {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	line-height: 1.9rem;
 	padding-bottom: 12px;
 }
@@ -86,6 +85,21 @@ section {
   justify-content: center;
 }
 
+/* Title */
+section#title {
+	flex-direction: column;
+}
+section#title img#flag {
+	width: 50vw;
+	height: auto;
+	animation-name: welcome;
+	animation-timing-function: ease;
+	animation-duration: 1.8s;
+}
+section#title img#down {
+	margin-top: 15vh;
+}
+
 /* Entry */
 section.entry {
 	align-items: flex-start;
@@ -101,6 +115,7 @@ section.entry aside.artpiece {
 }
 section.entry aside.artpiece img {
 	width: 40vw;
+	border-radius: 10px;
 }
 
 /* Title */
@@ -115,6 +130,22 @@ section#desc {
 }
 section#desc div {
 	width: 40vw;
+}
+
+/* Tumblr */
+section#tumblr {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+	background-color: #270D15;
+}
+section#tumblr article {
+	width: 40vw;
+}
+section#tumblr div {
+	border-left: 3px solid #f9cbda;
+	margin-left: 10px;
+	padding-left: 20px;
 }
 
 /* Cover */
@@ -161,29 +192,77 @@ section.extra img#yearbook {
 	height: 30vw;
 	max-height: 300px;
 	width: auto;
+	border-radius: 10px;
 }
 section.extra img.heads {
 	height: 30vw;
 	max-height: 200px;
 	width: auto;
+	border-radius: 10px;
 }
 
 /* Timeline */
 section#timeline {
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background-color: #f9cbda;
 	flex-direction: column;
+}
+section#timeline article {
+	width: 89vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+section#timeline article ul li {
+	border-left: 3px solid #270D15;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 20px;
+	padding-bottom: 0;
 }
 
 /* Photographs */
 section.photos {
 	background-color: #270D15;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-rows: 1fr;
 }
-section.photos img {
-	max-height: 80vh;
+section.p-1 {
+	grid-template-columns: 1fr;
+}
+section.p-2 {
+	grid-template-columns: 1fr 1fr;
+}
+section.p-3 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+section.photos div.photo-card {
+	height: 100%;
 	width: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+section.photos div.photo-card h2 {
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+	color: white;
+
+}
+
+/* Individual Photographs */
+section.photos div#p-id-1 {
+	background-image: url('../images/photos/2014.JPG');
+}
+section.photos div#p-id-2 {
+	background-image: url('../images/photos/2017.jpg');
+}
+section.photos div#p-id-3 {
+	background-image: url('../images/photos/2020.jpg');
 }
 
 /* Stickers */
@@ -193,21 +272,38 @@ section#stickers {
 }
 section#stickers img.sticker {
 	height: 20vw;
+	max-height: 600px;
 	width: auto;
+	transition: 0.5s;
+}
+section#stickers img.sticker:hover {
+	opacity: 0.8;
 }
 section#stickers img.sticker:first-child {
 	margin-right: 50px;
 }
-section#stickers p {
+section#stickers div#button {
 	margin-top: 50px;
+	background-color: #442731;
+	padding: 12px 22px 14px 22px;
 	font-style: italic;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	border-radius: 6px;
+	transition: 0.5s;
 }
-section#stickers a {
-	color: #270D15;
+section#stickers div#button:hover {
+	background-color: #270D15;
+	border-radius: 12px;
+}
+section#stickers a div#button div {
+	color: white;
 	text-decoration: none;
 }
-section#stickers p span img {
-	margin-left: 4px;
+section#stickers a div#button div:last-child {
+	margin-left: 10px;
 }
 
 /* End */
@@ -232,6 +328,8 @@ footer {
 	display: flex;
   align-items: center;
   justify-content: center;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 footer img {
 	height: 60px;
@@ -241,18 +339,37 @@ footer img {
 footer p a {
 	font-style: italic;
 	color: #270D15;
+	transition: 0.5s;
+}
+footer p a:hover {
+	opacity: 0.5;
 }
 
 @media only screen and (max-width: 800px) {
 	h1{ 
 		font-size: 2.7rem;
 	}
+	h2 {
+		line-height: 1.5rem;
+	}
+
 	section {
 		flex-direction: column;
 	}
-	section#desc div {
-		width: 60vw;
+
+	section#title img#flag {
+		width: 90vw;
+		height: auto;
 	}
+
+	section#desc div {
+		width: 75vw;
+	}
+	
+	section#tumblr article {
+		width: 75vw;
+	}
+
 	section.entry article {
 		width: 90vw;
 		margin-right: 0;
@@ -267,7 +384,75 @@ footer p a {
 		width: 90vw;
 	}
 
+	section.cover img.single {
+		height: auto;
+		max-height: none;
+		width: 90vw;
+	}
+	section.cover img.double {
+		height: auto;
+		max-height: none;
+		width: 90vw;
+	}
+
+	section#timeline article {
+		width: 89vw;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	section.p-1 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 500px;
+	}
+	section.p-2 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 200px 200px;
+	}
+	section.p-3 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 500px 500px 500px;
+	}
+
+	section#stickers div:first-child {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	section#stickers img.sticker {
+		height: auto;
+		width: 50vw;
+	}
+	section#stickers img.sticker:first-child {
+		margin-right: 0px;
+	}
+	section#stickers img.sticker:last-child {
+		margin-top: 50px;
+	}
+
 	section#end div {
 		width: auto;
 	}
+}
+
+@keyframes welcome {
+  0% {
+    transform: translateY(50%);
+		opacity: 0;
+  }
+	5% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+	60% {
+    transform: translateY(-4%);
+		opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+		opacity: 1;
+  }
 }
