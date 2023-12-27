@@ -298,7 +298,7 @@ section#stickers div#button:hover {
 	background-color: #270D15;
 	border-radius: 12px;
 }
-section#stickers a div#button div {
+section#stickers a {
 	color: white;
 	text-decoration: none;
 }
@@ -363,11 +363,11 @@ footer p a:hover {
 	}
 
 	section#desc div {
-		width: 75vw;
+		width: 90vw;
 	}
 	
 	section#tumblr article {
-		width: 75vw;
+		width: 90vw;
 	}
 
 	section.entry article {
@@ -424,7 +424,7 @@ footer p a:hover {
 	}
 	section#stickers img.sticker {
 		height: auto;
-		width: 50vw;
+		width: 65vw;
 	}
 	section#stickers img.sticker:first-child {
 		margin-right: 0px;
