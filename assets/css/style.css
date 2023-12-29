@@ -83,6 +83,7 @@ section {
 	display: flex;
   align-items: center;
   justify-content: center;
+	background: #F9F6EE;
 }
 
 /* Title */
@@ -233,11 +234,11 @@ section.photos {
 section.p-1 {
 	grid-template-columns: 1fr;
 }
-section.p-2 {
-	grid-template-columns: 1fr 1fr;
-}
 section.p-3 {
 	grid-template-columns: 1fr 1fr 1fr;
+}
+section.p-4 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 section.photos div.photo-card {
 	height: 100%;
@@ -251,18 +252,55 @@ section.photos div.photo-card h2 {
 	bottom: 20px;
 	right: 50px;
 	color: white;
-
 }
 
 /* Individual Photographs */
-section.photos div#p-id-1 {
-	background-image: url('../images/photos/2014.JPG');
+section.photos div#p-pre-1 {
+	background-image: url('../images/photos/pre-1.jpeg');
+	background-position: center;
 }
-section.photos div#p-id-2 {
-	background-image: url('../images/photos/2017.jpg');
+section.photos div#p-pre-2 {
+	background-image: url('../images/photos/pre-2.jpeg');
+	background-position: center;
 }
-section.photos div#p-id-3 {
-	background-image: url('../images/photos/2020.jpg');
+section.photos div#p-pre-3 {
+	background-image: url('../images/photos/pre-3.jpeg');
+	background-position: center;
+}
+section.photos div#p-pre-4 {
+	background-image: url('../images/photos/pre-4.jpeg');
+	background-position: left;
+}
+
+section.photos div#p-2014-a {
+	background-image: url('../images/photos/2014-a.jpeg');
+	background-position: left;
+}
+section.photos div#p-2014-c {
+	background-image: url('../images/photos/2014-c.jpeg');
+	background-position: left;
+}
+section.photos div#p-2014-d {
+	background-image: url('../images/photos/2014-d.jpeg');
+	background-position: center;
+}
+
+section.photos div#p-2015 {
+	background-image: url('../images/photos/2015.jpg');
+	background-position: left;
+}
+section.photos div#p-2017 {
+	background-image: url('../images/photos/2017.jpeg');
+	background-position: right;
+}
+section.photos div#p-2019 {
+	background-image: url('../images/photos/2019.jpeg');
+	background-position: center;
+}
+
+/* IDs */
+section#ids {
+	min-height: 0;
 }
 
 /* Stickers */
@@ -409,11 +447,15 @@ footer p a:hover {
 	}
 	section.p-2 {
 		grid-template-columns: 1fr;
-		grid-template-rows: 200px 200px;
+		grid-template-rows: 500px 500px;
 	}
 	section.p-3 {
 		grid-template-columns: 1fr;
 		grid-template-rows: 500px 500px 500px;
+	}
+	section.p-4 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 500px 500px 500px 500px;
 	}
 
 	section#stickers div:first-child {
