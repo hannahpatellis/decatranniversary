@@ -241,6 +241,9 @@ section.photos {
 	display: grid;
 	grid-template-rows: 1fr;
 }
+section.photos h2 {
+	text-align: right;
+}
 section.p-1 {
 	grid-template-columns: 1fr;
 }
@@ -301,11 +304,11 @@ section.photos div#p-2015 {
 }
 section.photos div#p-2017 {
 	background-image: url('../images/photos/2017.jpeg');
-	background-position: right;
+	background-position: right top;
 }
 section.photos div#p-2019 {
 	background-image: url('../images/photos/2019.jpeg');
-	background-position: center;
+	background-position: center top;
 }
 
 /* IDs */
@@ -418,6 +421,10 @@ footer a:hover {
 		width: 90vw;
 	}
 
+	section.entry {
+		flex-direction: column-reverse;
+	}
+
 	section.entry article {
 		width: 90vw;
 		margin-right: 0;
@@ -425,6 +432,7 @@ footer a:hover {
 	}
 	section.entry aside.artpiece {
 		margin-top: 36px;
+		margin-bottom: 36px;
 		width: 90vw;
 		margin-left: 5vw;
 	}
