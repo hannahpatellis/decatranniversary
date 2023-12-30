@@ -42,11 +42,21 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+  --bone: #F9F6EE;
+	--dark: #131212;
+  --dred: #270D15;
+  --dred-light: #442731;
+  --pink: #f9cbda;
+	--pic-radius: 10px;
+}
+
 body {
   font-size: 16px;
 	font-family: "contralto-small", New York, serif;
 	font-weight: 400;
 	font-style: normal;
+	color: var(--dark);
 }
 h1 {
   font-size: 3rem;
@@ -83,7 +93,7 @@ section {
 	display: flex;
   align-items: center;
   justify-content: center;
-	background: #F9F6EE;
+	background: var(--bone);
 }
 
 /* Title */
@@ -116,18 +126,18 @@ section.entry aside.artpiece {
 }
 section.entry aside.artpiece img {
 	width: 40vw;
-	border-radius: 10px;
+	border-radius: var(--pic-radius);
 }
 
 /* Title */
 section#title {
-	background-color: #270D15;
+	background-color: var(--dred);
 }
 
 /* Description */
 section#desc {
 	flex-direction: column;
-	background-color: #f9cbda;
+	background-color: var(--pink);
 }
 section#desc div {
 	width: 40vw;
@@ -137,14 +147,14 @@ section#desc div {
 section#tumblr {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	color: white;
-	background-color: #270D15;
+	color: var(--bone);
+	background-color: var(--dred);
 }
 section#tumblr article {
 	width: 40vw;
 }
 section#tumblr div {
-	border-left: 3px solid #f9cbda;
+	border-left: 3px solid var(--pink);
 	margin-left: 10px;
 	padding-left: 20px;
 }
@@ -166,7 +176,7 @@ section.cover img.double {
 
 /* Extra */
 section.extra {
-	background-color: #f9cbda;
+	background-color: var(--pink);
 	flex-direction: column;
 }
 section.extra div {
@@ -193,20 +203,20 @@ section.extra img#yearbook {
 	height: 30vw;
 	max-height: 300px;
 	width: auto;
-	border-radius: 10px;
+	border-radius: var(--pic-radius);
 }
 section.extra img.heads {
 	height: 30vw;
 	max-height: 200px;
 	width: auto;
-	border-radius: 10px;
+	border-radius: var(--pic-radius);
 }
 
 /* Timeline */
 section#timeline {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #f9cbda;
+	background-color: var(--pink);
 	flex-direction: column;
 }
 section#timeline article {
@@ -218,7 +228,7 @@ section#timeline article {
 	grid-template-columns: 1fr 1fr;
 }
 section#timeline article ul li {
-	border-left: 3px solid #270D15;
+	border-left: 3px solid var(--dred);
 	margin-bottom: 20px;
 	margin-left: 10px;
 	padding-left: 20px;
@@ -227,7 +237,7 @@ section#timeline article ul li {
 
 /* Photographs */
 section.photos {
-	background-color: #270D15;
+	background-color: var(--dred);
 	display: grid;
 	grid-template-rows: 1fr;
 }
@@ -251,7 +261,7 @@ section.photos div.photo-card h2 {
 	position: absolute;
 	bottom: 20px;
 	right: 50px;
-	color: white;
+	color: var(--bone);
 }
 
 /* Individual Photographs */
@@ -306,7 +316,7 @@ section#ids {
 /* Stickers */
 section#stickers {
 	flex-direction: column;
-	background-color: #f9cbda;
+	background-color: var(--pink);
 }
 section#stickers img.sticker {
 	height: 20vw;
@@ -322,7 +332,7 @@ section#stickers img.sticker:first-child {
 }
 section#stickers div#button {
 	margin-top: 50px;
-	background-color: #442731;
+	background-color: var(--dred-light);
 	padding: 12px 22px 14px 22px;
 	font-style: italic;
 	display: flex;
@@ -333,11 +343,11 @@ section#stickers div#button {
 	transition: 0.5s;
 }
 section#stickers div#button:hover {
-	background-color: #270D15;
+	background-color: var(--dred);
 	border-radius: 12px;
 }
 section#stickers a {
-	color: white;
+	color: var(--bone);
 	text-decoration: none;
 }
 section#stickers a div#button div:last-child {
@@ -346,7 +356,7 @@ section#stickers a div#button div:last-child {
 
 /* End */
 section#end {
-	background-color: #270D15;
+	background-color: var(--dred);
 	flex-direction: column;
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -358,7 +368,7 @@ section#end div {
 }
 
 footer {
-	background-color: #f9cbda;
+	background-color: var(--pink);
 	text-align: center;
 	flex-direction: column;
 	padding-top: 100px;
@@ -374,12 +384,12 @@ footer img {
 	width: auto;
 	margin-bottom: 20px;
 }
-footer p a {
+footer a {
 	font-style: italic;
-	color: #270D15;
+	color: var(--dred);
 	transition: 0.5s;
 }
-footer p a:hover {
+footer a:hover {
 	opacity: 0.5;
 }
 
