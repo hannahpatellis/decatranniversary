@@ -285,7 +285,7 @@ section.photos div#p-pre-1 {
 }
 section.photos div#p-pre-2 {
 	background-image: url('../images/photos/pre-2.jpeg');
-	background-position: center;
+	background-position: center top;
 }
 section.photos div#p-pre-3 {
 	background-image: url('../images/photos/pre-3.jpeg');
@@ -502,8 +502,11 @@ footer a:hover {
 		margin-bottom: 50px;
 	}
 
-	section#end div {
-		width: auto;
+	section#end div#applemusic {
+		width: 330px;
+	}
+	section#end div#spotify {
+		width: 330px;
 	}
 }
 
