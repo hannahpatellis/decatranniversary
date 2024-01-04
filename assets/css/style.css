@@ -47,6 +47,7 @@ table {
 	--dark: #131212;
   --dred: #270D15;
   --dred-light: #442731;
+	--red: #8e2a4d;
   --pink: #f9cbda;
 	--pic-radius: 10px;
 }
@@ -66,7 +67,16 @@ h1 {
 h2 {
 	font-size: 1.2rem;
 	font-style: italic;
+	line-height: 1.8rem;
 	padding-bottom: 24px;
+}
+h2.cw {
+	color: var(--red);
+	border-left: 3px solid var(--dred);
+	padding-bottom: 0;
+	margin-left: 10px;
+	padding-left: 20px;
+	margin-bottom: 24px;
 }
 p {
 	font-size: 1rem;
@@ -113,19 +123,20 @@ section#title img#down {
 
 /* Entry */
 section.entry {
-	align-items: flex-start;
+	flex-direction: column-reverse;
+	align-items: center;
 	padding-bottom: 100px;
 }
 section.entry article {
 	text-align: left;
-	width: 40vw;
-	margin-right: 36px;
+	width: 50vw;
 }
 section.entry aside.artpiece {
-	width: 40vw;
+	width: 60vw;
+	margin-bottom: 100px;
 }
 section.entry aside.artpiece img {
-	width: 40vw;
+	width: 60vw;
 	border-radius: var(--pic-radius);
 }
 
@@ -364,9 +375,13 @@ section#end {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
-section#end div {
-	margin-bottom: 100px;
+section#end div#applemusic {
 	height: 450px;
+	width: 660px;
+	margin-bottom: 100px;
+}
+section#end div#spotify {
+	height: 352;
 	width: 660px;
 }
 
@@ -421,20 +436,11 @@ footer a:hover {
 		width: 90vw;
 	}
 
-	section.entry {
-		flex-direction: column-reverse;
-	}
-
 	section.entry article {
 		width: 90vw;
-		margin-right: 0;
-		margin-left: 5vw;
 	}
 	section.entry aside.artpiece {
-		margin-top: 36px;
-		margin-bottom: 36px;
 		width: 90vw;
-		margin-left: 5vw;
 	}
 	section.entry aside.artpiece img {
 		width: 90vw;
@@ -491,6 +497,9 @@ footer a:hover {
 	}
 	section#stickers img.sticker:last-child {
 		margin-top: 50px;
+	}
+	section#stickers div#button {
+		margin-bottom: 50px;
 	}
 
 	section#end div {
