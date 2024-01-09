@@ -67,7 +67,7 @@ h1 {
 h2 {
 	font-size: 1.2rem;
 	font-style: italic;
-	line-height: 1.8rem;
+	line-height: 2rem;
 	padding-bottom: 24px;
 }
 h2.cw {
@@ -215,7 +215,7 @@ section.extra h2 {
 }
 section.extra img#yearbook {
 	height: 30vw;
-	max-height: 300px;
+	max-height: 400px;
 	width: auto;
 	border-radius: var(--pic-radius);
 }
@@ -450,6 +450,17 @@ footer p {
 		width: 90vw;
 	}
 
+	section.extra img#yearbook {
+		height: 60vw;
+	}
+	section.extra img.heads {
+		height: 40vw;
+		max-height: 300px;
+	}
+	section.extra div:last-child img {
+		margin-right: 30px;
+	}
+
 	section.entry article {
 		width: 90vw;
 	}
@@ -517,6 +528,9 @@ footer p {
 	}
 	section#stickers div#buttongroup div#buy {
 		margin-right: 0px;
+	}
+	section#stickers div#buttongroup div#download {
+		margin-top: 20px;
 	}
 	section#stickers div.button {
 		flex-direction: row;
