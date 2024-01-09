@@ -152,6 +152,10 @@ section#desc {
 section#desc div {
 	width: 40vw;
 }
+section#desc h2.cw {
+	color: var(--dred);
+	margin-top: 24px;
+}
 
 /* Tumblr */
 section#tumblr {
@@ -343,7 +347,15 @@ section#stickers img.sticker:hover {
 section#stickers img.sticker:first-child {
 	margin-right: 50px;
 }
-section#stickers div#button {
+section#stickers div#buttongroup {
+	flex-direction: row;
+	display: flex;
+	margin-bottom: 50px;
+}
+section#stickers div#buttongroup div#buy {
+	margin-right: 24px;
+}
+section#stickers div.button {
 	margin-top: 50px;
 	background-color: var(--dred-light);
 	padding: 12px 22px 14px 22px;
@@ -355,7 +367,7 @@ section#stickers div#button {
 	border-radius: 6px;
 	transition: 0.5s;
 }
-section#stickers div#button:hover {
+section#stickers div.button:hover {
 	background-color: var(--dred);
 	border-radius: 12px;
 }
@@ -363,7 +375,7 @@ section#stickers a {
 	color: var(--bone);
 	text-decoration: none;
 }
-section#stickers a div#button div:last-child {
+section#stickers a div.button div:last-child {
 	margin-left: 10px;
 }
 
@@ -497,8 +509,14 @@ footer a:hover {
 	section#stickers img.sticker:last-child {
 		margin-top: 50px;
 	}
-	section#stickers div#button {
-		margin-bottom: 50px;
+	section#stickers div#buttongroup {
+		flex-direction: column;
+	}
+	section#stickers div#buttongroup div#buy {
+		margin-right: 0px;
+	}
+	section#stickers div.button {
+		flex-direction: row;
 	}
 
 	section#end div#applemusic {
