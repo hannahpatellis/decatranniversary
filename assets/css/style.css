@@ -514,6 +514,7 @@ footer p {
 	section.p-1 {
 		grid-template-columns: 1fr;
 		grid-template-rows: 500px;
+		min-height: 0;
 	}
 	section.p-2 {
 		grid-template-columns: 1fr;
