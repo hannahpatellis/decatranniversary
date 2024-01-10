@@ -282,6 +282,27 @@ section.photos div.photo-card h2 {
 }
 
 /* Individual Photographs */
+section.photos div#p-ds-1 {
+	background-image: url('../images/ds_01.jpeg');
+	background-position: center bottom;
+}
+section.photos div#p-ds-2 {
+	background-image: url('../images/ds_02.jpeg');
+	background-position: center;
+}
+section.photos div#p-ds-3 {
+	background-image: url('../images/ds_03.jpeg');
+	background-position: center;
+}
+section.photos div#p-ps-first {
+	background-image: url('../images/first.jpeg');
+	background-position: center;
+}
+section.photos div#p-ps-second {
+	background-image: url('../images/second.jpeg');
+	background-position: center;
+}
+
 section.photos div#p-pre-1 {
 	background-image: url('../images/photos/pre-1.jpeg');
 	background-position: center;
